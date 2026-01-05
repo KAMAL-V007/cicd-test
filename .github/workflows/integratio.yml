@@ -23,6 +23,22 @@ jobs:
       - name: Install-dependencies 
         run:  npm install package.json  
 
+    Install-postgres:
+     runs-on: ubuntu-latest
+     services:
+       postgres:
+         image: postgres:15  
+         env:
+         POSTGRES_USER: user
+         POSTGRES_PASSWORD: password 
+         POSTGRES_DB: devops
+       ports:
+         - "5432:5432"
 
-
-
+     steps:
+       - uses: actions/checkout@v4
+       - name: npm test
+         run: npm test
+         env:
+            DATABASE_URL: postgres://myuser:mypassword@localhost:5432/devops
+       
