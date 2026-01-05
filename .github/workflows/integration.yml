@@ -42,4 +42,4 @@ jobs:
         run: npm test
         env:
           DATABASE_URL: postgres://myuser:mypassword@localhost:5432/devops
-        needs: postgres
+       
