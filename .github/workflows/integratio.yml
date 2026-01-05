@@ -1,0 +1,28 @@
+name: Integration-Test
+
+on: 
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+    
+
+jobs:
+    checkout-and-build:
+      runs-on: ubuntu-latest
+      steps:
+
+      - name: checkout-code-base
+        uses: actions@checkout@v4  
+
+      - name: Install-node
+        uses: actions@setup-node 
+        with: 
+          node-version: '20.0'
+        
+      - name: Install-dependencies 
+        run:  npm install package.json  
+
+
+
+
