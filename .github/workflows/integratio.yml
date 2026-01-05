@@ -29,9 +29,9 @@ jobs:
        postgres:
          image: postgres:15  
          env:
-         POSTGRES_USER: user
-         POSTGRES_PASSWORD: password 
-         POSTGRES_DB: devops
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: password 
+          POSTGRES_DB: devops
        ports:
          - "5432:5432"
 
