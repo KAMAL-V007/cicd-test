@@ -19,10 +19,9 @@ jobs:
         uses: actions/setup-node 
         with: 
           node-version: '20.0'
-        
+          cache: true
       - name: Install-dependencies 
         run:  npm install package.json  
-        cache: true
 
 
 
