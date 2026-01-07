@@ -1,0 +1,7 @@
+name: Static-Site-S3-Integration
+
+on:
+  push:
+    branches: ["s3"]
+
+
